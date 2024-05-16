@@ -1,0 +1,86 @@
+@import '../../../mixins.scss';
+.hero{
+    .banner{
+        height:500px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @include md{
+            height: 500px;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            padding-top: 5vh;
+             @include md{
+                 padding-top:0;
+                 padding-bottom: 5vh;
+                 flex-direction: row;
+                 gap: 20px;
+                 justify-content: center;
+                 align-items:center;
+             }
+            img{
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                transform: translate(-200%,-200%);
+                z-index: 2;
+                transition:all ease 1s;
+                @include lg{
+                    height: 250px;
+                    width: 250px;
+                }
+            }
+            .bannercontent{
+                z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2vh;
+            transform: translate(200%,-350%);
+                transition:all ease 1s;
+        }
+            p{
+                span{
+                    color:var(--color);
+                }
+            }
+            
+            .subtitle{
+                font-size: 1rem;
+                font-weight: 500;
+                @include md{
+                    font-size: 1.5rem;
+                }
+               span{
+                  color: yellow;
+               }
+            }
+            .para{
+                font-size: 0.8rem;
+                line-height: 1.2;
+                width: 300px;
+                text-align: left;
+                @include md{
+                    font-size: 1.1rem;
+                    width: 450px;
+                }
+            }
+        }
+    }
+    .blur{
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        top: 470px;
+        @include md{
+            top: 460px;
+        }
+    }
+}

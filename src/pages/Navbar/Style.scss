@@ -1,0 +1,115 @@
+@import '../../mixins.scss';
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+    padding: 0 20px;
+    background-color:var(--bg);
+    color: white;
+    z-index: 2;
+    @include md{
+        position: sticky;
+        top: 0;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        color: var(--color);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        h1{
+            color: var(--color);
+            font-size: 22px;
+            font-family: cursive;
+        }
+        img{
+            height:40px;
+        }
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .options{
+            display: flex;
+            gap: 20px;
+            font-weight: 600;
+            align-items: center;
+            display: none;
+            @include md{
+                display: flex;
+                margin-right: 40px;
+            }
+            .name{
+                display: none;
+                @include lg{
+                    display: block;
+                }
+            }
+            button{
+                border-radius: 5px;
+                padding: 5px 10px;
+                font-size: 0.9rem;
+                font-weight: 600;
+                margin: 0;
+                cursor: pointer;
+            }
+        }
+        .ham{
+            @include md{
+                display: none;
+            }
+        }
+    }
+    img{
+        border-radius: 50%;
+        height: 30px;
+    }
+}
+
+.subnav{
+    height: 90vh;
+    // margin-top: 10vh;
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 10vh;
+    background-color: rgba(0, 0, 0,0.3);
+    backdrop-filter: blur(4px);
+    transform: translateX(-500%);
+    transition: 0.5s all ease;
+    z-index: 3;
+    .options{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        font-weight: 600;
+        button{
+            background-color:var(--color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 1rem;
+            margin: 0;
+            cursor: pointer;
+        }
+        
+    }
+}
+.darknav{
+    background-color: rgba(0, 0, 0,0.3);
+    color: white;
+}
+.lightnav{
+    background-color: rgba(255, 255, 255,0.3);
+    .options{
+        a{
+            color: black;
+        }
+    }
+}

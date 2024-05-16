@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root{
+    --color:rgb(243, 14, 90);
+    --bg:rgb(11, 22, 37);
+    font-family: "Ubuntu Sans", sans-serif;
+    a{
+        color:white;
+        text-decoration: none;
+    }
+    .icon{
+        cursor: pointer;
+    }
+    
+    .dark{
+        background-color: var(--bg);
+        color: white;
+        a{
+            color: white;
+        }
+    }
+    .light{
+        background-color: white;
+        color: black;
+        a{
+            color: black;
+        }
+    }
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg);
+    color: white;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.btn{
+            width: fit-content;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 1rem;
+            font-weight: 600;
+}
+.btn:hover{
+    scale: 0.95;
+    cursor: pointer;
+}
+button{
+    background:transparent;
+    border: 1px solid var(--color);
+    color: var(--color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+button:hover{
+    color:white;
+    background-color: var(--color);
+}
+
+nav{
+    .options{
+        .active{
+            color:var(--color);
+        }
+    }
+}
+
